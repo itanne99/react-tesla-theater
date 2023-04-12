@@ -11,7 +11,9 @@ const sites = [
     { "name": "Plex", "url": "https://www.plex.tv/" },
     { "name": "Twitch", "url": "https://www.twitch.tv/" },
     { "name": "YouTube", "url": "https://www.youtube.com/" },
-    { "name": "YouTubeTV", "url": "https://tv.youtube.com/welcome/" }
+    { "name": "YouTubeTV", "url": "https://tv.youtube.com/welcome/" },
+    { "name": "Movie-Web", "url": "https://movie-web.app"},
+    { "name": "Flixtor", "url": "https://flixtor.video/"}
 ];
 
 const sortedSites = _.sortBy(sites, "name");
@@ -19,7 +21,7 @@ const sortedSites = _.sortBy(sites, "name");
 export const StreamingSitesList = (props) => {
   return (
     <Container>
-      <Row lg={4} className="g-5">
+      <Row lg={4} className="g-5 justify-content-center">
         {sortedSites.map((site) => (
           <Col key={Math.random()}>
             <SiteCard name={site.name} url={site.url} theme={props.theme}/>

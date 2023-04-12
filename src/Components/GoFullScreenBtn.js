@@ -5,7 +5,7 @@ export const GoFullScreenBtn = (props) => {
   return (
     <Container
       fluid
-      className="mt-auto d-flex justify-content-center"
+      className="d-flex justify-content-center"
       style={{ position: "sticky", bottom: 15 }}
     >
       <Button

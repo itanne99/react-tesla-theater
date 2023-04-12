@@ -5,22 +5,20 @@ import { FiMoon, FiSun } from "react-icons/fi";
 
 export const ToggleThemeBtn = (props) => {
   const circleStyle = {
-    height: "4em",
-    width: "fit-content",
-    borderRadius: "50%",
-    padding: "10px 20px",
+    height: "5em",
+    width: "fit-content"
   };
 
   const iconStyle = {
-    height: "100%",
-    width: "auto",
+    height: "95%",
+    width: "100%",
   };
 
   return (
     <Button
       variant={props.theme === "light" ? "dark" : "light"}
       style={circleStyle}
-      className="top-right m-3"
+      className="top-right m-3 "
       onClick={props.toggleTheme}
     >
       {props.theme === "light" ? (

@@ -6,7 +6,7 @@ import { StreamingSitesList } from '../Components/StreamingSitesList'
 
 export const Home = (props) => {
   return (
-    <Container className="d-flex flex-column" style={{ minHeight: "100vh" }}>
+    <Container className="d-flex flex-column justify-content-between" style={{ minHeight: "100vh" }}>
       <SiteHeader theme={props.theme}/>
       <StreamingSitesList theme={props.theme}/>
       <GoFullScreenBtn theme={props.theme}/>
