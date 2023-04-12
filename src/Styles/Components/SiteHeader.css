@@ -1,0 +1,10 @@
+@font-face {
+    font-family: TeslaFont;
+    src: url(TESLA.ttf) format('truetype');
+}
+
+.tesla-font {
+    font-family: TeslaFont, serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
