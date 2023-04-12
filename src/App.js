@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
-import { Container } from 'react-bootstrap';
-import { GoFullScreenBtn } from './Components/GoFullScreenBtn';
-import { SiteHeader } from './Components/SiteHeader';
-import { StreamingSitesList } from './Components/StreamingSitesList';
+import { ToggleThemeBtn } from './Components/ToggleThemeBtn';
+import { Home } from './Pages/Home';
 
 const App = () => {
   const [theme, setTheme] = useState('light')
 
+  const toggleTheme = () => {
+    setTheme((prevTheme) => {
+      return prevTheme === "light" ? "dark" : "light";
+    });
+  };
+
   return (
-    <Container className="d-flex flex-column" style={{ minHeight: "100vh" }}>
-      <SiteHeader/>
-      <StreamingSitesList theme={theme}/>
-      <GoFullScreenBtn/>
-    </Container>
+    <div style={{background: `${theme === "light"? "" : "gray" }`}}>
+    <Home theme={theme} />
+    <ToggleThemeBtn theme={theme} toggleTheme={toggleTheme} />
+    </div>
   );
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Container } from "react-bootstrap";
 
-export const GoFullScreenBtn = () => {
+export const GoFullScreenBtn = (props) => {
   return (
     <Container
       fluid
@@ -9,7 +9,7 @@ export const GoFullScreenBtn = () => {
       style={{ position: "sticky", bottom: 15 }}
     >
       <Button
-        variant="dark"
+        variant={props.theme === "light"? "dark" : "light"}
         href={`https://www.youtube.com/redirect?q=${window.location.href}`}
       >
         <h3>Go Fullscreen</h3>

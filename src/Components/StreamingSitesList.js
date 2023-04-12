@@ -21,7 +21,7 @@ export const StreamingSitesList = (props) => {
     <Container>
       <Row lg={4} className="g-5">
         {sortedSites.map((site) => (
-          <Col>
+          <Col key={Math.random()}>
             <SiteCard name={site.name} url={site.url} theme={props.theme}/>
           </Col>
         ))}

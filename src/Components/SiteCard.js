@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 
 export const SiteCard = (props) => {
   return (
-    <Card style={{ border: "none" }}>
+    <Card style={{ border: "none", background: 'none' }}>
 
       <a href={props.url}>
         <Card.Img
